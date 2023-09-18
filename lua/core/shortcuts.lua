@@ -36,3 +36,5 @@ keybind("n", "t", ":ToggleTerm<CR>")
 keybind("t", "<C-t>", ("exit<CR>"))
 
 --autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
+
+-- LSP buffer hover bindings

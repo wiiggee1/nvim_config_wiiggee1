@@ -1,15 +1,16 @@
 require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    flavour = "macchiato", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
         dark = "mocha",
     },
     transparent_background = true,
-    term_colors = true,
+    show_end_of_buffer = false,
+    term_colors = false,
     dim_inactive = {
         enabled = false,
-        shade = "dark",
-        percentage = 0.15,
+        shade = "light",
+        percentage = 0.1,
     },
     no_italic = false, -- Force no italic
     no_bold = false, -- Force no bold
@@ -18,7 +19,7 @@ require("catppuccin").setup({
         conditionals = { "italic" },
         loops = {},
         functions = {},
-        keywords = {},
+        keywords = {"bold"},
         strings = {},
         variables = {},
         numbers = {},
@@ -33,16 +34,18 @@ require("catppuccin").setup({
     integrations = {
         cmp = true,
         gitsigns = true,
+        mason = true,
         nvimtree = true,
         telescope = true,
         notify = false,
         mini = false,
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
+    indent_blankline = {enabled = true},
 })
 
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
