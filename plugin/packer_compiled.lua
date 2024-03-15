@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?.lua;/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?/init.lua;/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?.lua;/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1697887905/lib/lua/5.1/?.so"
+local package_path_str = "/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/wiiggee1/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -128,14 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["lspsaga.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0" },
-    load_after = {},
-    loaded = true,
-    needs_bufread = false,
-    path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim",
-    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -223,11 +210,6 @@ _G.packer_plugins = {
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["omnisharp-vim"] = {
-    loaded = true,
-    path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/omnisharp-vim",
-    url = "https://github.com/OmniSharp/omnisharp-vim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -248,21 +230,21 @@ _G.packer_plugins = {
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ["toggleterm.nvim"] = {
     loaded = true,
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n§\2\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\thint\thint\nerror\nerror\fwarning\twarn\16information\tinfo\1\0\f\14auto_open\1\15auto_close\1\tmode\26workspace_diagnostics\17indent_lines\2\16fold_closed\6>\14fold_open\6v\17auto_preview\2\18cycle_results\2\fpadding\2\25use_diagnostic_signs\1\nicons\1\vheight\3\n\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\n§\2\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\16information\tinfo\thint\thint\nerror\nerror\fwarning\twarn\1\0\f\tmode\26workspace_diagnostics\14auto_open\1\15auto_close\1\17indent_lines\2\16fold_closed\6>\14fold_open\6v\17auto_preview\2\18cycle_results\2\fpadding\2\25use_diagnostic_signs\1\nicons\1\vheight\3\n\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
-  },
-  vimwiki = {
-    loaded = true,
-    path = "/home/wiiggee1/.local/share/nvim/site/pack/packer/start/vimwiki",
-    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 
@@ -273,17 +255,8 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B
 time([[Config for nvim-autopairs]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n§\2\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\thint\thint\nerror\nerror\fwarning\twarn\16information\tinfo\1\0\f\14auto_open\1\15auto_close\1\tmode\26workspace_diagnostics\17indent_lines\2\16fold_closed\6>\14fold_open\6v\17auto_preview\2\18cycle_results\2\fpadding\2\25use_diagnostic_signs\1\nicons\1\vheight\3\n\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\n§\2\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\16information\tinfo\thint\thint\nerror\nerror\fwarning\twarn\1\0\f\tmode\26workspace_diagnostics\14auto_open\1\15auto_close\1\17indent_lines\2\16fold_closed\6>\14fold_open\6v\17auto_preview\2\18cycle_results\2\fpadding\2\25use_diagnostic_signs\1\nicons\1\vheight\3\n\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-lspconfig ]]
-vim.cmd [[ packadd lspsaga.nvim ]]
-
--- Config for: lspsaga.nvim
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
-
-time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
