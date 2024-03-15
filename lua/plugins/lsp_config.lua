@@ -1,6 +1,4 @@
----
 -- Configure LSP servers
----
 
 --require'lspconfig'.sumneko_lua.setup()
 local lsp_zero = require('lsp-zero')
