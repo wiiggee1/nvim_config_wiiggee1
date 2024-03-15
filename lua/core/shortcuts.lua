@@ -7,7 +7,13 @@ local default_options = { noremap = true, silent = true }
 
 -- CR = "Enter key"
 
+<<<<<<< HEAD
 
+=======
+-- Set leader key
+vim.g.mapleader=" "
+keybind("n", "<leader>pv", vim.cmd.Ex)
+>>>>>>> origin/master
 
 -- Shortcut keybinding for saving file using: "CTRL S"
 keybind("i", "<C-s>", "<Esc>:w<CR>:echo 'File saved!'<CR>i")

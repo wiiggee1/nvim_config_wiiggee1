@@ -10,7 +10,11 @@ require("catppuccin").setup({
     dim_inactive = {
         enabled = false,
         shade = "light",
+<<<<<<< HEAD
         percentage = 0.1,
+=======
+        percentage = 0.3,
+>>>>>>> origin/master
     },
     no_italic = false, -- Force no italic
     no_bold = false, -- Force no bold

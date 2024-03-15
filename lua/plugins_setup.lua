@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 -- Protected call 
+=======
+--vim.cmd [[packadd packer.nvim]]
+
+-- Bootstrapping for automatically install and setup 'packer.nvim'
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
+>>>>>>> origin/master
 local status, packer = pcall(require, "packer")
 if (not status) then
     return
@@ -39,9 +58,17 @@ return require('packer').startup(function(use)
 
   -- My plugins here
     use {"catppuccin/nvim", as = "catppuccin"}
+<<<<<<< HEAD
     use 'puremourning/vimspector'
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+=======
+    use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-jdtls'
+    use 'jay-babu/mason-nvim-dap.nvim'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use 'theHamsta/nvim-dap-virtual-text'
+>>>>>>> origin/master
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -49,8 +76,11 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+<<<<<<< HEAD
     use('OmniSharp/omnisharp-vim')
  
+=======
+>>>>>>> origin/master
     use {'windwp/nvim-autopairs',
         config = function () require("nvim-autopairs").setup {} end
     }
@@ -58,14 +88,20 @@ return require('packer').startup(function(use)
 
     use('akinsho/toggleterm.nvim')
     use('akinsho/nvim-bufferline.lua')
+<<<<<<< HEAD
   
     use('nvim-lualine/lualine.nvim')
     use('kyazdani42/nvim-web-devicons')
   
+=======
+    use('nvim-lualine/lualine.nvim')
+    use('kyazdani42/nvim-web-devicons')  
+>>>>>>> origin/master
     use {
         'nvim-tree/nvim-tree.lua', tag = 'nightly',
         requires = {'nvim-tree/nvim-web-devicons'}
     }
+<<<<<<< HEAD
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -97,6 +133,30 @@ return require('packer').startup(function(use)
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
 		  {'williamboman/mason.nvim'},
+=======
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {'j-hui/fidget.nvim', tag = 'v1.0.0'}
+    use 'simrat39/rust-tools.nvim'
+    use 'onsails/lspkind.nvim' -- vs-code like icons for autocompletion
+    use ({'folke/neodev.nvim',})
+    use({
+        'folke/todo-comments.nvim',
+        requires = {"nvim-lua/plenary.nvim"}
+    })
+
+    use {
+	    'VonHeikemen/lsp-zero.nvim',
+	    branch = 'v3.x',
+	    requires = {
+		  -- LSP Support
+		  {'neovim/nvim-lspconfig'},
+		  {
+              'williamboman/mason.nvim', 
+              run = function()
+                  pcall(vim.cmd, 'MasonUpdate')
+              end, 
+          },
+>>>>>>> origin/master
 		  {'williamboman/mason-lspconfig.nvim'},
 
 		  -- Autocompletion
@@ -109,6 +169,7 @@ return require('packer').startup(function(use)
 
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
+<<<<<<< HEAD
 		  {'rafamadriz/friendly-snippets'},
 	    }
   }
@@ -120,6 +181,15 @@ return require('packer').startup(function(use)
             require("lspsaga").setup({})
         end,
     })
+=======
+		  --{'rafamadriz/friendly-snippets'},
+	    }
+  }
+  -- Automatically set up your configuration after cloning packer.nvim
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+>>>>>>> origin/master
 
 end)
 
